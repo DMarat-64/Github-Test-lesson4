@@ -1,16 +1,13 @@
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ChouidBeWikiTest {
 
 
      @Test
-    void ShouidBeSoftAssertionsWiki() {
+    void ShouidBeSoftAssertionsWikiTest() {
         //Открываем страницу wiki
         open("https://github.com/selenide/selenide/wiki");
         //Кликаем на Show 3 more pages…
@@ -30,8 +27,6 @@ public class ChouidBeWikiTest {
                  "    $(\"#second\").should(visible).click();\n" +
                  "  }\n" +
                  "}")).shouldBe(visible);
-        sleep(5000);
-
 
     }
 }
